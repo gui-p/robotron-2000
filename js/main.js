@@ -1,6 +1,9 @@
 const controle = document.querySelectorAll('[data-controle]');
-
 const estatisticas = document.querySelectorAll('[data-estatistica]')
+const botaoTroca = document.querySelector("[data-trocar]");
+const imagem = document.querySelector('[data-cor]')
+
+const robosCores = ['Branco', 'Vermelho', 'Preto']
 
 const pecas = {
     "bracos": {
@@ -76,3 +79,23 @@ controle.forEach(elemento => {
     })
 })
 
+botaoTroca.addEventListener('click', ()=>{
+    let corAtual = imagem.dataset.cor;
+    let cor = circulaLista(robosCores, corAtual);
+    imagem.setAttribute('data-cor', cor);
+    let imagemNova = 'img/Robotron-2000-' + cor + '.png';
+    imagem.src = imagemNova;
+    
+})
+
+function circulaLista(lista, itemAtual){
+    for(i = 0; i < lista.length; i++){
+        if(lista[i] === itemAtual){
+            let posProxima = i + 1;
+            if(posProxima === lista.length){
+                posProxima = 0;
+            }
+            return lista[posProxima];
+        }
+    }
+}

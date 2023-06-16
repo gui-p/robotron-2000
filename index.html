@@ -15,7 +15,7 @@
 <body>
     <main>
         <section class="robotron">
-            <img class="robo" src="img/robotron.png" alt="Robotron" id="robotron">
+            <img class="robo" src='img/Robotron-2000-Vermelho.png' alt="Robotron" id="robotron" data-cor="Vermelho">
             <figcaption class="titulo">ROBOTRON <br>2000</figcaption>
         </section>
 
@@ -94,7 +94,10 @@
                         </div>
                     </div>
                 </div>
-                <input type="submit" value="Iniciar produção" class="producao" id="producao">
+                <div class="botoes_inferiores">
+                    <input type="button" value="Trocar cor" class="producao" id="producao" data-trocar>
+                    <input type="submit" value="Iniciar produção" class="producao" id="producao">
+                </div>
             </form>
         </section>
     </main>

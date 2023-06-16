@@ -17,7 +17,7 @@ body {
     font-weight: 300;
 }
 
-body, input {
+body, input, button {
     font-family: 'Teko', sans-serif;
 }
 
@@ -129,6 +129,12 @@ main {
 
 .linha {
     border-color: var(--main-cinza);
+}
+
+.botoes_inferiores{
+    display: flex;
+    flex-direction: row;
+    column-gap: 5%;
 }
 
 .producao {
